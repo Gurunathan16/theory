@@ -14,10 +14,11 @@ import java.nio.file.Path;
 @SpringBootApplication
 public class JpaApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException
+	{
+
 		SpringApplication.run(JpaApplication.class, args);
 
 
 	}
-
 }

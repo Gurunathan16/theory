@@ -14,9 +14,10 @@ public class Address
 
     private String locality;
 
-    private String city;
+    private String pinCode;
+
+    private String district;
 
     private String State;
 
-    private String pinCode;
 }
