@@ -14,7 +14,7 @@ import java.nio.file.Path;
 @SpringBootApplication
 public class JpaApplication {
 
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args)
 	{
 
 		SpringApplication.run(JpaApplication.class, args);

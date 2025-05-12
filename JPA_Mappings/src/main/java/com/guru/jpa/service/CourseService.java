@@ -7,8 +7,6 @@ import com.guru.jpa.repository.CourseRepository;
 import com.guru.jpa.repository.DepartmentRepository;
 import com.guru.jpa.util.mappers.MapperHelper;
 import org.springframework.stereotype.Service;
-import com.guru.jpa.util.mappers.DTOMapper;
-
 @Service
 public class CourseService
 {
