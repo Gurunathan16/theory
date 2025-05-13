@@ -4,19 +4,19 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Course
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     private String courseCode;
 
     private String courseName;
@@ -31,9 +31,12 @@ public class Course
     private Set<Professor> professors;
 
     @ManyToOne
-    @JoinColumn(name = "courses")
+    @JoinColumn(name = "deptId")
     private Department department;
 
     @ManyToMany(mappedBy = "courses")
     private Set<Student> students;
+
+    @CreatedDate
+    private LocalDateTime createdAt;
 }
